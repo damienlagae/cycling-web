@@ -18,3 +18,10 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+###> docker ###
+.docker/database/data
+!.docker/database/data/.gitkeep
+.docker/database/logs
+!.docker/database/logs/.gitkeep
+###< docker ###
