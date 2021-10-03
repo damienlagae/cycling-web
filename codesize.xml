@@ -8,17 +8,7 @@
         Custom ruleset for Symfony
     </description>
 
-    <rule ref="rulesets/codesize.xml" >
-        <!-- configured below -->
-        <exclude name="ExcessiveParameterList" />
-    </rule>
-    <!-- Increase maximum mumber of parameters for a new object -->
-    <rule ref="rulesets/codesize.xml/ExcessiveParameterList">
-        <properties>
-            <property name="minimum" value="15" description="Maximum number of acceptable parameters." />
-        </properties>
-    </rule>
-
+    <rule ref="rulesets/codesize.xml"/>
     <rule ref="rulesets/design.xml">
         <!-- configured below -->
         <exclude name="CouplingBetweenObjects" />
@@ -38,7 +28,6 @@
     <rule ref="rulesets/naming.xml">
         <!-- configured below -->
         <exclude name="ShortVariable" />
-        <exclude name="LongVariable" />
         <exclude name="ShortMethodName" />
         <!-- allow getters for bool methods -->
         <exclude name="BooleanGetMethodName" />
@@ -47,12 +36,6 @@
     <rule ref="rulesets/naming.xml/ShortVariable">
         <properties>
             <property name="exceptions" value="em,id,io,to" />
-        </properties>
-    </rule>
-    <!-- Allow a longer length for long variables rule -->
-    <rule ref="rulesets/naming.xml/LongVariable">
-        <properties>
-            <property name="maximum" description="The variable length reporting threshold" value="30"/>
         </properties>
     </rule>
     <!-- Exclude up() from the short method name rule -->
