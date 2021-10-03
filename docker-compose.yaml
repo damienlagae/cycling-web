@@ -26,3 +26,10 @@ services:
             - '8080:80'
         depends_on:
             - database
+
+    phpqa:
+        image: damienlagae/phpqa:7.4
+        volumes:
+            - ./:/project
+            - ./var/cache/phpqa/tmp:/tmp
+        working_dir: /project

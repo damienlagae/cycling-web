@@ -1,0 +1,19 @@
+parameters:
+  level: 7
+  paths:
+    - ./src
+  symfony:
+    console_application_loader: tests/console-application.php
+    container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
+  doctrine:
+    objectManagerLoader: tests/object-manager.php
+  checkGenericClassInNonGenericObjectType: false
+includes:
+  - /tools/.composer/vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/extension.neon
+  - /tools/.composer/vendor-bin/phpstan/vendor/phpstan/phpstan-phpunit/rules.neon
+  - /tools/.composer/vendor-bin/phpstan/vendor/phpstan/phpstan-symfony/extension.neon
+  - /tools/.composer/vendor-bin/phpstan/vendor/phpstan/phpstan-symfony/rules.neon
+  - /tools/.composer/vendor-bin/phpstan/vendor/phpstan/phpstan-doctrine/extension.neon
+  - /tools/.composer/vendor-bin/phpstan/vendor/phpstan/phpstan-doctrine/rules.neon
+
+
