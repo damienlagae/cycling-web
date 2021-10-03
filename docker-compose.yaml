@@ -33,3 +33,11 @@ services:
             - ./:/project
             - ./var/cache/phpqa/tmp:/tmp
         working_dir: /project
+
+    yarn:
+        image: node:latest
+        volumes:
+            - .:/app
+        working_dir: /app
+        stdin_open: true
+        command: [ "sh","yarn.sh" ]
